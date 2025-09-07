@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ব্লগ - Chorcha Premium Coupons</title>
+    <meta name="description" content="চর্চা অ্যাপের সর্বশেষ আপডেট, পরীক্ষার প্রস্তুতি টিপস এবং ডিসকাউন্ট অফার নিয়ে আমাদের ব্লগ পড়ুন।">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://chorchapremium.coupons/blog.html" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-bg: #000000; --secondary-bg: #111111; --card-bg: #1a1a1a;
+            --text-light: #f1f1f1; --text-dark: #aaaaaa; --accent-red: #d32f2f;
+            --accent-red-darker: #b71c1c; --accent-red-glow: rgba(211, 47, 47, 0.25);
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            background-color: var(--primary-bg); color: var(--text-light);
+            font-family: 'Hind Siliguri', sans-serif; overflow-x: hidden;
+        }
+        .header, .sidebar, .overlay, .footer { /* Previous styles */ }
+        .header {
+            position: sticky; top: 0; left: 0; width: 100%; background-color: var(--secondary-bg);
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 10px 15px; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+        .header .logo { height: 55px; }
+        .menu-btn {
+            background: transparent; border: none; cursor: pointer; z-index: 1001;
+            display: flex; align-items: center; gap: 10px; padding: 8px;
+        }
+        .hamburger-icon {
+            display: flex; flex-direction: column; justify-content: space-around;
+            width: 28px; height: 22px;
+        }
+        .hamburger-icon .bar {
+            display: block; width: 100%; height: 3px; background-color: var(--text-light);
+            border-radius: 3px; transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+        .menu-btn.open .bar1 { transform: rotate(45deg) translate(6px, 6px); }
+        .menu-btn.open .bar2 { opacity: 0; }
+        .menu-btn.open .bar3 { transform: rotate(-45deg) translate(6px, -6px); }
+        .menu-text { color: var(--text-light); font-size: 16px; font-weight: 600; }
+        .sidebar {
+            height: 100%; width: 0; position: fixed; top: 0; left: -280px; width: 260px;
+            background-color: var(--secondary-bg); padding-top: 80px; display: flex;
+            flex-direction: column; align-items: center;
+            transition: left 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); z-index: 999;
+            box-shadow: 2px 0 15px rgba(0,0,0,0.5);
+        }
+        .sidebar.open { left: 0; }
+        .sidebar a {
+            padding: 12px 25px; text-decoration: none; font-size: 18px;
+            color: #ddd; display: block; transition: color 0.2s;
+        }
+        .sidebar a:hover { color: var(--accent-red); }
+        .overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); opacity: 0; visibility: hidden;
+            transition: opacity 0.4s, visibility 0.4s; z-index: 998;
+        }
+        .overlay.show { opacity: 1; visibility: visible; }
+        .footer {
+            margin-top: 50px; padding: 30px 20px; background-color: var(--secondary-bg);
+            text-align: center; color: var(--text-dark);
+        }
+        .footer-contact a {
+            color: var(--text-dark); text-decoration: none; display: block; margin: 8px 0;
+            transition: color 0.3s;
+        }
+        .footer-contact a:hover { color: var(--accent-red); }
+        .social-icons { margin-top: 20px; }
+        .social-icons a { margin: 0 12px; }
+        .social-icons svg {
+            width: 30px; height: 30px; fill: var(--text-dark);
+            transition: fill 0.3s, transform 0.3s;
+        }
+        .social-icons a:hover svg { fill: var(--text-light); transform: scale(1.2); }
+        .footer p { margin-top: 20px; font-size: 14px; }
+        .container { padding: 40px 20px; max-width: 1200px; margin: 0 auto; }
+        .page-header {
+            text-align: center; margin-bottom: 40px; padding: 20px; background-color: var(--card-bg);
+            border-radius: 15px; box-shadow: 0 0 25px var(--accent-red-glow);
+        }
+        .page-header h1 { font-size: 2.5rem; color: var(--accent-red); }
+        .page-header p { font-size: 1.1rem; color: var(--text-dark); margin-top: 10px; }
+        .blog-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;
+        }
+        .blog-card {
+            background-color: var(--card-bg); border-radius: 15px; overflow: hidden;
+            border: 1px solid #2a2a2a; box-shadow: 0 0 25px var(--accent-red-glow);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .blog-card:hover { transform: translateY(-10px); box-shadow: 0 10px 30px var(--accent-red-glow); }
+        .blog-card-img { width: 100%; height: 200px; object-fit: cover; }
+        .blog-card-content { padding: 20px; }
+        .blog-card-content h3 { font-size: 1.5rem; margin-bottom: 15px; }
+        .blog-card-content h3 a { color: var(--text-light); text-decoration: none; transition: color 0.3s; }
+        .blog-card-content h3 a:hover { color: var(--accent-red); }
+        .blog-meta { font-size: 0.9rem; color: var(--text-dark); margin-bottom: 15px; }
+        .blog-excerpt { font-size: 1rem; line-height: 1.6; margin-bottom: 20px; }
+        .read-more-btn { color: var(--accent-red); text-decoration: none; font-weight: bold; cursor: pointer; }
+
+        /* --- Modal (Float Page) Styles --- */
+        .modal {
+            display: none; position: fixed; z-index: 2000; left: 0; top: 0;
+            width: 100%; height: 100%; overflow: auto;
+            background-color: rgba(0,0,0,0.8); backdrop-filter: blur(5px);
+        }
+        .modal-content {
+            background-color: var(--card-bg); margin: 5% auto; padding: 30px;
+            border: 1px solid #444; width: 90%; max-width: 800px;
+            border-radius: 15px; position: relative;
+            animation: fadeIn 0.5s;
+        }
+        @keyframes fadeIn { from {opacity: 0; transform: scale(0.9);} to {opacity: 1; transform: scale(1);} }
+        .modal-close {
+            color: #aaa; float: right; font-size: 30px; font-weight: bold;
+            position: absolute; top: 10px; right: 25px;
+        }
+        .modal-close:hover, .modal-close:focus { color: var(--text-light); text-decoration: none; cursor: pointer; }
+        #modal-title { color: var(--accent-red); margin-bottom: 20px; }
+        #modal-body { line-height: 1.8; color: var(--text-dark); }
+        #modal-body img { max-width: 100%; border-radius: 10px; margin: 15px 0; }
+    </style>
+</head>
+
+<body>
+    <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+    <header class="header">
+        <button class="menu-btn" id="menu-btn" onclick="toggleSidebar()" aria-label="Toggle Navigation">
+            <div class="hamburger-icon">
+                <span class="bar bar1"></span><span class="bar bar2"></span><span class="bar bar3"></span>
+            </div>
+            <span class="menu-text" id="menu-text">Menu</span>
+        </button>
+        <a href="index.html"> <img src="Logomain.jpg" alt="চর্চা লোগো" class="logo" /> </a>
+        <div style="width: 85px;"></div>
+    </header>
+
+    <nav class="sidebar" id="sidebar">
+        <a href="index.html">Home</a><a href="ssc.html">SSC</a><a href="hsc.html">HSC</a>
+        <a href="bcs.html">BCS</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+    </nav>
+
+    <main class="container">
+        <div class="page-header">
+            <h1>আমাদের ব্লগ</h1>
+            <p>চর্চা অ্যাপের সর্বশেষ আপডেট, পরীক্ষার প্রস্তুতি টিপস এবং ডিসকাউন্ট অফার নিয়ে আমাদের ব্লগ পড়ুন।</p>
+        </div>
+
+        <div class="blog-grid">
+            <div class="blog-card">
+                <img src="https://images.pexels.com/photos/4144179/pexels-photo-4144179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="BCS পরীক্ষার প্রস্তুতি" class="blog-card-img">
+                <div class="blog-card-content">
+                    <h3>বিসিএস পরীক্ষার প্রস্তুতি নেওয়ার সেরা ৫টি কৌশল</h3>
+                    <div class="blog-meta">👤 লিখেছেন: মোহাম্মদ আবু জিসান চৌধুরী | 📅 তারিখ: সেপ্টেম্বর ০৫, ২০২৫</div>
+                    <p class="blog-excerpt">লক্ষ লক্ষ প্রতিযোগীর ভিড়ে বিসিএস পরীক্ষায় সফল হতে প্রয়োজন সঠিক কৌশল এবং নিয়মিত অনুশীলন...</p>
+                    <a class="read-more-btn" onclick="openModal(1)">আরও পড়ুন &rarr;</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img src="https://images.pexels.com/photos/256417/pexels-photo-256417.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="HSC পরীক্ষার জন্য প্রস্তুতি" class="blog-card-img">
+                <div class="blog-card-content">
+                    <h3>এইচএসসি পরীক্ষার জন্য চর্চা অ্যাপ কেন সেরা?</h3>
+                    <div class="blog-meta">👤 লিখেছেন: মোহাম্মদ আবু জিসান চৌধুরী | 📅 তারিখ: সেপ্টেম্বর ০২, ২০২৫</div>
+                    <p class="blog-excerpt">বোর্ড পরীক্ষার আগে হাজারো মডেল টেস্ট দিয়ে নিজের প্রস্তুতিকে নিখুঁত করার সেরা প্ল্যাটফর্ম হলো চর্চা...</p>
+                    <a class="read-more-btn" onclick="openModal(2)">আরও পড়ুন &rarr;</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img src="https://images.pexels.com/photos/5905709/pexels-photo-5905709.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="SSC পরীক্ষার প্রস্তুতি" class="blog-card-img">
+                <div class="blog-card-content">
+                    <h3>আমাদের প্রোমো কোড যেভাবে ব্যবহার করবেন</h3>
+                    <div class="blog-meta">👤 লিখেছেন: মোহাম্মদ আবু জিসান চৌধুরী | 📅 তারিখ: আগস্ট ২৮, ২০২৫</div>
+                    <p class="blog-excerpt">আমাদের প্রোমো কোড 'Jeshan20' ব্যবহার করে চর্চার যেকোনো প্রিমিয়াম সাবস্ক্রিপশনে কিভাবে ২০% ছাড় পাবেন...</p>
+                    <a class="read-more-btn" onclick="openModal(3)">আরও পড়ুন &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="blogModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-contact">
+            <a href="https://wa.me/8801778682815" target="_blank">📱 WhatsApp: +8801778682815</a>
+            <a href="mailto:abujeshan1139181@gmail.com">📧 Gmail: abujeshan1139181@gmail.com</a>
+        </div>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.32 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"/></svg></a>
+            <a href="https://twitter.com" target="_blank" aria-label="Twitter X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/></svg></a>
+            <a href="https://youtube.com" target="_blank" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.73,18.78 17.93,18.84C17.13,18.91 16.44,18.94 15.84,18.94L15,19C12.81,19 11.2,18.84 10.17,18.56C9.27,18.31 8.69,17.73 8.44,16.83C8.31,16.36 8.22,15.73 8.16,14.93C8.09,14.13 8.06,13.44 8.06,12.84L8,12C8,9.81 8.16,8.2 8.44,7.17C8.69,6.27 9.27,5.69 10.17,5.44C11.64,5.06 12.81,5 15,5H15.84C16.44,5 17.13,5.03 17.93,5.09C18.73,5.16 19.36,5.25 19.83,5.38C20.73,5.63 21.31,6.2 21.56,7.11V7.17Z"/></svg></a>
+        </div>
+        <p>&copy; 2025 Mohammad Abu Jisan Chowdhury | Affiliate of Chorcha | All rights reserved.</p>
+    </footer>
+
+    <script>
+        // --- Sidebar ---
+        const sidebar = document.getElementById('sidebar');
+        const menuBtn = document.getElementById('menu-btn');
+        const overlay = document.getElementById('overlay');
+        const menuText = document.getElementById('menu-text');
+        function toggleSidebar() {
+            const isOpen = sidebar.classList.toggle('open');
+            menuBtn.classList.toggle('open');
+            overlay.classList.toggle('show');
+            menuText.textContent = isOpen ? 'Close' : 'Menu';
+        }
+
+        // --- Blog Modal Logic ---
+        const blogModal = document.getElementById('blogModal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalBody = document.getElementById('modal-body');
+
+        // Sample blog post data
+        const blogPosts = {
+            1: {
+                title: "বিসিএস পরীক্ষার প্রস্তুতি নেওয়ার সেরা ৫টি কৌশল",
+                content: `<p>লক্ষ লক্ষ প্রতিযোগীর ভিড়ে বিসিএস পরীক্ষায় সফল হতে প্রয়োজন সঠিক কৌশল এবং নিয়মিত অনুশীলন। এখানে সেরা ৫টি কৌশল আলোচনা করা হলো যা আপনার প্রস্তুতিকে আরও শাণিত করবে:</p>
+                <img src="https://images.pexels.com/photos/4144179/pexels-photo-4144179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="BCS পরীক্ষার প্রস্তুতি">
+                <ol>
+                    <li><strong>সিলেবাস বিশ্লেষণ:</strong> প্রথমে বিসিএস প্রিলিমিনারি পরীক্ষার সিলেবাসটি ভালোভাবে পড়ুন এবং প্রতিটি বিষয়ের জন্য আলাদা পরিকল্পনা তৈরি করুন।</li>
+                    <li><strong>বিগত সালের প্রশ্ন সমাধান:</strong> প্রশ্নের ধরণ বুঝতে বিগত বছরের প্রশ্নগুলো সমাধান করা অত্যন্ত জরুরি।</li>
+                    <li><strong>সময় ব্যবস্থাপনা:</strong> প্রতিটি বিষয়ের জন্য নির্দিষ্ট সময় বরাদ্দ করুন এবং মডেল টেস্ট দেওয়ার সময় ঘড়ি ধরে পরীক্ষা দিন।</li>
+                    <li><strong>দুর্বলতা চিহ্নিতকরণ:</strong> চর্চা অ্যাপে মডেল টেস্ট দিয়ে আপনার দুর্বল বিষয়গুলো চিহ্নিত করুন এবং সেগুলোর ওপর বেশি জোর দিন।</li>
+                    <li><strong>রিভিশন:</strong> যা পড়েছেন তা নিয়মিত রিভিশন না করলে ভুলে যাওয়ার সম্ভাবনা থাকে। তাই নিয়মিত রিভিশনের জন্য একটি রুটিন তৈরি করুন।</li>
+                </ol>`
+            },
+            2: {
+                title: "এইচএসসি পরীক্ষার জন্য চর্চা অ্যাপ কেন সেরা?",
+                content: "" // Empty content to show "Uploading..."
+            },
+            3: {
+                title: "আমাদের প্রোমো কোড যেভাবে ব্যবহার করবেন",
+                content: null // Null content to show "Uploading..."
+            }
+        };
+
+        function openModal(postId) {
+            const post = blogPosts[postId];
+            if (post) {
+                modalTitle.textContent = post.title;
+                if (post.content) {
+                    modalBody.innerHTML = post.content;
+                } else {
+                    modalBody.innerHTML = '<p style="font-size: 1.2rem; font-weight: bold; text-align: center;">Uploading...</p>';
+                }
+                blogModal.style.display = "block";
+            }
+        }
+
+        function closeModal() {
+            blogModal.style.display = "none";
+        }
+
+        // Close modal if user clicks outside of the content
+        window.onclick = function(event) {
+            if (event.target == blogModal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
